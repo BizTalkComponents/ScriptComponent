@@ -72,12 +72,6 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Src\Generic\BizTalkComponents.PipelineComponents.ScriptComponent.csproj">
-      <Project>{6b80360a-4674-4d8d-a4b3-f70659060714}</Project>
-      <Name>BizTalkComponents.PipelineComponents.ScriptComponent</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
