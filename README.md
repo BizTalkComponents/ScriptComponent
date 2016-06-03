@@ -12,12 +12,21 @@ This component is useful when you need to perform any simple action on either th
 ## Remarks ##
 Throws ArgumentException if any of the required parameters is not specified.
 
+The following namespaces are included in every snippet:
+
+* System
+* Microsoft.BizTalk.Component.Interop
+* Microsoft.BizTalk.Streaming
+* Microsoft.BizTalk.Message.Interop
+* System.Xml
+* Microsoft.BizTalk.XPath
+
 ## Examples ##
 ```c#
 //Promotes the value Test to the property Namespace#Name
 (ctx, msg) => 
 {
-    ctx.Promote(\"Name\",\"Namespace\", \"Test\"); return msg;
+    ctx.Promote("Name","Namespace", "Test"); return msg;
 };
 ```
 ```c#
