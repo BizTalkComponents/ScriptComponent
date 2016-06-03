@@ -9,7 +9,7 @@ using System.Text;
 namespace BizTalkComponents.PipelineComponents.Test.UnitTests
 {
     [TestClass]
-    public class GenericTest
+    public class ScriptComponentTest
     {
         [TestMethod]
         public void TestSetProperty()
