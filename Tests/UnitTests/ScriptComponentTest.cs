@@ -75,5 +75,21 @@ namespace BizTalkComponents.PipelineComponents.Test.UnitTests
             Assert.AreEqual("testmsg", result[0].Context.Read("Name2", "Namespace"));
             
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestCompileError()
+        {
+            //Incomplete, will not compile.
+            string snippet = "(ctx, msg) => {";
+
+            var pipeline = PipelineFactory.CreateEmptyReceivePipeline();
+
+            var scriptComponent = new ScriptComponent.ScriptComponent();
+            scriptComponent.Snippet = snippet;
+            var msg = MessageHelper.CreateFromString("<testmessage1>testmsg</testmessage1>");
+            pipeline.AddComponent(scriptComponent, PipelineStage.ResolveParty);
+            var result = pipeline.Execute(msg);
+        }
     }
 }
