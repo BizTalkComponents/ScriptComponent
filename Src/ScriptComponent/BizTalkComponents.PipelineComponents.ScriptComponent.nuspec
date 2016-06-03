@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizTalkComponents.PipelineComponents.ScriptComponent</id>
+    <version>$version$</version>
+    <authors>Robin Hultman</authors>
+    <projectUrl>https://github.com/BizTalkComponents/ScriptComponent</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Promotes a specified value to a specified property.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>BizTalk</tags>
+  </metadata>
+</package>
