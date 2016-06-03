@@ -88,9 +88,20 @@ namespace BizTalkComponents.PipelineComponents.ScriptComponent
             parameters.ReferencedAssemblies.Add("System.Xml.dll");
 
             CompilerResults results = provider.CompileAssemblyFromSource(parameters, script);
+
+            StringBuilder errors = new StringBuilder();
+
             if (results.Errors.Count != 0)
             {
-                Console.WriteLine(results.Errors);
+                foreach (var error in results.Errors)
+                {
+                    errors.AppendLine(error.ToString());
+                }
+            }
+
+            if (errors.Length > 0)
+            {
+                throw new Exception(errors.ToString());
             }
 
             dynamic instance = results.CompiledAssembly.CreateInstance("BizTalkComponents.GenericHelper");
